@@ -1,0 +1,24 @@
+{
+  "name": "learn-js-ts-react",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.5.0",
+    "@testing-library/react": "^16.0.0",
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^5.0.0",
+    "jsdom": "^25.0.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "typescript": "~5.8.2",
+    "vite": "^6.4.1",
+    "vitest": "^2.1.8"
+  }
+}

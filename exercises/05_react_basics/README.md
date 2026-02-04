@@ -54,7 +54,3 @@ if (isLoading) return <div>Loading...</div>;
 if (error) return <div>{error}</div>;
 return <div>Ready</div>;
 ```
-
-## Why This Matters In The App
-
-All UI in `godela_v0_frontend` is composed of functional components with props, state, and event handlers. List rendering and conditional UI are everywhere (tabs, datasets, chat messages, status panels).

@@ -41,7 +41,3 @@ useEffect(() => {
   return () => clearTimeout(id);
 }, [value, delayMs]);
 ```
-
-## Why This Matters In The App
-
-The chat pane auto‑scrolls, file inputs use refs to open hidden inputs, and polling/timers use effects. These hooks are essential to replicate real app behavior.

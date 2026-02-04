@@ -46,7 +46,3 @@ function isParameterType(value: string): value is ParameterType {
   return PARAMETER_TYPES.includes(value as ParameterType);
 }
 ```
-
-## Why This Matters In The App
-
-These features help keep types aligned as the app grows: safer error handling, type‑safe object updates, and more reliable runtime checks.

@@ -50,7 +50,3 @@ const nextFiles = [...project.files, "b.zip"];
 // Function that returns another function
 const log = (prefix: string) => (msg: string) => `${prefix} ${msg}`;
 ```
-
-## Why This Matters In The App
-
-In `godela_v0_frontend`, state updates are done immutably (e.g., updating tabs, datasets, and messages). You’ll constantly map/filter arrays and create new objects when updating state.

@@ -1,6 +1,6 @@
 # 07_app_patterns — Godela App Patterns
 
-This chapter mirrors patterns from `godela_v0_frontend`. The exercises are intentionally “real‑ish” so you internalize the same logic used in the app.
+This chapter mirrors patterns from real-world frontend apps.
 
 ## Key Concepts
 
@@ -77,7 +77,3 @@ for (let i = 0; i < maxAttempts; i++) {
 }
 return 'TIMEOUT';
 ```
-
-## Why This Matters In The App
-
-These are the same patterns used in `App.tsx`, `ConfigView`, and the API services. If you can solve these exercises confidently, you can implement real features in the codebase.

@@ -1,6 +1,6 @@
 # learn-js-ts-react
 
-Progressive, test‑driven exercises to get you productive in JavaScript, TypeScript, and React for the `godela_v0_frontend` codebase. Every file has a `TODO` and a matching test. You make tests pass in order.
+Progressive, test‑driven exercises to get you productive in JavaScript, TypeScript, and React for modern frontend codebases. Every file has a `TODO` and a matching test. You make tests pass in order.
 
 ## How It Works
 
@@ -52,8 +52,3 @@ Progressive, test‑driven exercises to get you productive in JavaScript, TypeSc
 - `setupTests.ts` — test setup (jest‑dom matchers for React tests)
 - `vitest.config.ts` — test runner config
 - `tsconfig.json` — TypeScript compiler config
-
-## Notes
-
-- Some tests will fail immediately (by design) until you implement the TODOs.
-- If you want more practice in a section, tell me which one and I’ll add more.

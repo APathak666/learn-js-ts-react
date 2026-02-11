@@ -1,31 +1,69 @@
-# 00_intro — Warm‑Up
+# 00 — Warm-Up
 
-This chapter is a gentle on‑ramp. The goal is to get you comfortable with TypeScript syntax and the “tests define behavior” workflow.
+This chapter makes sure your setup works and you're comfortable with the workflow: read the test, implement the function, run the test.
 
-## Key Concepts
+## What You Need to Know
 
-- **Functions**: reusable blocks of logic that take inputs and return outputs.
-- **Types**: TypeScript adds type annotations (e.g., `string`, `number`) to catch mistakes early.
-- **Exports/Imports**: each exercise file exports a function that the test imports.
+### Template Literals
 
-## Examples
+JavaScript has three ways to make strings:
 
-```ts
-// A typed function that returns a string
-export function hello(name: string): string {
-  return `Hello, ${name}!`;
+```js
+const a = 'single quotes';
+const b = "double quotes";
+const c = `backtick template literals`;
+```
+
+Only backtick strings let you embed expressions with `${}`:
+
+```js
+const name = "world";
+const greeting = `Hello, ${name}!`;  // "Hello, world!"
+```
+
+This works with any expression, not just variables:
+
+```js
+`2 + 2 = ${2 + 2}`             // "2 + 2 = 4"
+`upper: ${"hi".toUpperCase()}`  // "upper: HI"
+```
+
+### Summing an Array
+
+When you need to combine a list into a single value, the two common patterns are:
+
+**`for...of` loop:**
+```js
+function total(prices: number[]): number {
+  let result = 0;
+  for (const p of prices) {
+    result += p;
+  }
+  return result;
+}
+
+total([10, 20, 30])  // 60
+total([])            // 0
+```
+
+**`reduce`:**
+```js
+function total(prices: number[]): number {
+  return prices.reduce((acc, p) => acc + p, 0);
 }
 ```
 
-```ts
-// Sum all numbers in an array
-export function sum(numbers: number[]): number {
-  let total = 0;
-  for (const n of numbers) total += n;
-  return total;
-}
+Both are fine. Pick whichever feels clearer to you.
+
+## Exercises
+
+| File | What to do |
+|------|-----------|
+| `hello.ts` | Return a greeting string using template literals |
+| `sum.ts` | Return the sum of all numbers in an array (empty array returns `0`) |
+
+## Running
+
+```sh
+npm test -- exercises/00_intro
 ```
-
-## How To Think About The Tests
-
-The tests call your functions with example inputs and check the outputs. Your job is to make the outputs match exactly. Start with the tests, then implement the minimal logic that satisfies them.

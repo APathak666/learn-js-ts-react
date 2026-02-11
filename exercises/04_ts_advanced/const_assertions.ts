@@ -5,5 +5,5 @@ export type ParameterType = string;
 
 // TODO: implement a type guard.
 export function isParameterType(value: string): value is ParameterType {
-  return false;
+  return (PARAMETER_TYPES.indexOf(value) !== -1);
 }

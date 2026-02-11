@@ -10,10 +10,14 @@ export type ProjectSummary = Pick<Project, 'id' | 'name' | 'status'>;
 
 // TODO: apply a partial update without mutating the original.
 export function updateProject(project: Project, update: ProjectUpdate): Project {
-  return project;
+  return {...project, ...update};
 }
 
 // TODO: return only id, name, status.
 export function toSummary(project: Project): ProjectSummary {
-  return { id: '', name: '', status: 'DRAFT' };
+  return {
+    id: project.id,
+    name: project.name,
+    status: project.status
+  };
 }

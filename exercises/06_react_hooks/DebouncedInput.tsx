@@ -9,6 +9,14 @@ interface DebouncedInputProps {
 export const DebouncedInput: React.FC<DebouncedInputProps> = ({ delayMs, onDebouncedChange }) => {
   const [value, setValue] = useState('');
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      onDebouncedChange(value)
+    }, delayMs)
+
+    return () => clearTimeout(timer)
+  }, [value])
+
   return (
     <input
       value={value}

@@ -12,9 +12,11 @@ export interface SimulationParameter {
 }
 
 // TODO: return a readable description.
-// - If isFixed and value exists: "<name> = <value><unit>"
-// - Else if min/max exist: "<name> [min-max]<unit>"
+// - If isFixed and value exists: "<name> = <value> <unit>"
+// - Else if min/max exist: "<name> [min-max] <unit>"
 // - Else: just the name
 export function describeParameter(p: SimulationParameter): string {
-  return '';
+  if (p.value !== undefined && p.isFixed === true) { return `${p.name} = ${p.value} ${p.unit}`; }
+  else if (p.min !== undefined && p.max !== undefined) { return `${p.name} [${p.min}-${p.max}] ${p.unit}`; }
+  else { return `${p.name}`;}
 }

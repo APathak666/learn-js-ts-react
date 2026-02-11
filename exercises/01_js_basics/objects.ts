@@ -18,13 +18,12 @@ export function createProject(input: ProjectInput): Project {
   return {
     id: input.id,
     name: input.name,
-    templateId: '',
-    description: ''
+    templateId: 'CFD-CHT',
+    description: '',
   };
 }
 
 // TODO: return a NEW project object with updated name.
 export function renameProject(project: Project, name: string): Project {
-  project.name = name;
-  return project;
+  return {...project, name: name};
 }

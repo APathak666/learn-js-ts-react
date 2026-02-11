@@ -11,7 +11,7 @@ interface PropsCardProps {
 // TODO: render name and status. Call onSelect when clicked.
 export const PropsCard: React.FC<PropsCardProps> = ({ name, status, onSelect }) => {
   return (
-    <div>
+    <div onClick={() => { onSelect?.() }}>
       <h3>{name}</h3>
       <span>{status}</span>
     </div>

@@ -5,11 +5,12 @@ import React, { useState } from 'react';
 // - Increment adds 1
 // - Reset sets back to 0
 export const Counter: React.FC = () => {
+  const [count, setCount] = useState(0);
   return (
     <div>
-      <span data-testid="count">0</span>
-      <button>Increment</button>
-      <button>Reset</button>
+      <span data-testid="count">{count}</span>
+      <button onClick={() => setCount(count+1)}>Increment</button>
+      <button onClick={() => setCount(0)}>Reset</button>
     </div>
   );
 };

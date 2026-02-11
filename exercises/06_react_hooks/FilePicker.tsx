@@ -8,9 +8,13 @@ interface FilePickerProps {
 export const FilePicker: React.FC<FilePickerProps> = ({ onFiles }) => {
   const inputRef = useRef<HTMLInputElement>(null);
 
+  const handleClick = () => {
+    inputRef.current?.focus;
+  }
+
   return (
     <div>
-      <button>Choose Files</button>
+      <button onClick={handleClick}>Choose Files</button>
       <input type="file" multiple hidden ref={inputRef} data-testid="file-input" />
     </div>
   );

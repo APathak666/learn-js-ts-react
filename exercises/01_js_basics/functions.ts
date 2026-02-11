@@ -3,7 +3,7 @@
 // Returns a function that prepends the prefix.
 // Example: const log = createPrefixedLogger('[API]'); log('ready') => "[API] ready"
 export function createPrefixedLogger(prefix: string) {
-  return (message: string) => message;
+  return (message: string) => `${prefix} ${message}`;
 }
 
 // Returns a function that only runs once. Subsequent calls return the first result.

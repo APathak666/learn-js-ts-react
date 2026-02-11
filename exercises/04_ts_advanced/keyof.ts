@@ -5,5 +5,7 @@ export function getProp<T, K extends keyof T>(obj: T, key: K): T[K] {
 }
 
 export function setProp<T, K extends keyof T>(obj: T, key: K, value: T[K]): T {
-  return obj;
+  let new_obj = {...obj};
+  new_obj[key] = value;
+  return new_obj;
 }
